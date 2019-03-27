@@ -247,7 +247,7 @@ app.get('/player_info', function(req, res) {
 	
 });
 
-app.get('/player_info/post', function(req, res) {
+app.get('/player_info/get_player', function(req, res) {
 	var player_id = req.query.player_choice;
 	var list_players = 'select id, name from football_players;';
 	var chosen_player = 'select * from football_players where id=' + player_id + ';';
