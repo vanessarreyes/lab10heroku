@@ -66,7 +66,7 @@
 							</td>
 							<td>Avg. Passing Yards: 
 								<% if(player_info){ %>
-									<%- player_info.passing_yards / games_played %>
+									<%- Math.round(player_info.passing_yards / games_played) %>
 								<% } %>
 							</td>
 						</tr>
@@ -79,7 +79,7 @@
 							</td>
 							<td>Avg. Rushing Yards: 
 								<% if(player_info){ %>
-									<%- player_info.rushing_yards / games_played %>
+									<%- Math.round(player_info.rushing_yards / games_played) %>
 								<% } %>
 							</td>
 						</tr>
@@ -91,7 +91,7 @@
 							</td>
 							<td>Avg. Receiving Yards: 
 								<% if(player_info){ %>
-									<%- player_info.receiving_yards / games_played %>
+									<%- Math.round(player_info.receiving_yards / games_played) %>
 								<% } %>
 							</td>
 						</tr>
