@@ -32,7 +32,7 @@ var pgp = require('pg-promise')();
 // 	password: 'pwd'
 // };
 
-var dbConfig = process.env.DATABASE_URL;
+const dbConfig = process.env.DATABASE_URL;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
