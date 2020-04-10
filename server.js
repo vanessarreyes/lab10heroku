@@ -24,15 +24,15 @@ var pgp = require('pg-promise')();
 **********************/
 
 
-const dbConfig = {
-	host: 'localhost',
-	port: 5432,
-	database: 'football_db',
-	user: 'postgres',
-	password: 'pwd'
-};
+// const dbConfig = {
+// 	host: 'localhost',
+// 	port: 5432,
+// 	database: 'football_db',
+// 	user: 'postgres',
+// 	password: 'pwd'
+// };
 
-var db = pgp(dbConfig);
+var dbConfig = process.env.DATABASE_URL;
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -289,4 +289,5 @@ app.get('/player_info/get_player', function(req, res) {
 
 });
 
-app.listen(3000);
+//app.listen(3000);
+app.listen(process.env.PORT);
